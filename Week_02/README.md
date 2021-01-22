@@ -1,5 +1,46 @@
 学习笔记：
-以模拟串行GC oom为例，分析GC日志：
+
+首先对GC日志的一些名词做下解释：
+项目的src/resource目录下列举了一些不同垃圾收集器的GC日志例子，其中文件名是【垃圾收集器名词+Xmx大小】下面对上面日志中出现的一些名词进行下解释：
+DefNew
+串行收集器：是使用-XX:+UseSerialGC (新生代、老年代都是用串行收集器)
+
+ParNew
+并行收集器：是使用-XX:+UseParNewGC (新生代使用并行收集器，老年代使用串行收集器)，或者，使用 -XX:+UseConcMarkSweepGC (新生代使用并行收集器，老年代使用CMS)
+
+PSYoungGen
+是使用-XX:+UseParallelOldGC (新生代、老年代都使用并行回收器)，或者，使用 -XX:+UseParallelGC (新生代使用并行回收器，老年代使用串行回收器)
+PS指的是Parallel Scavenge,  PSYoungGen为 Eden+FromSpace， 而整个YoungGeneration为Eden+FromSpace+ToSpace
+
+GC
+表明进行一次牢记回收，前面没有Full修饰，表明这是一次Minor GC，但是它表示 不止是GC新生代，并且现有的不管是新生代还是老年代都会STW；
+
+Allocation Failure
+表明本次引起GC的原因是因为在年轻代中没有足够的空间能够存储新的数据了。
+
+Full GC (Ergonomics)
+这里可以看到full gc的原因是 Ergonomics ,是因为开启了自适应参数 UseAdaptiveSizePolicy，jvm自己进行自适应调整引发的full gc
+
+tenured generation
+生命周期较常的对象，归入到tenured generation。一般是经过多次minor gc，还 依旧存活的对象，将移入到tenured generation。（当然，在minor gc中如果存活的对象的超过survivor的容量，放不下的对象会直接移入到tenured generation） 
+tenured generation的gc称为major gc，就是通常说的full gc。 
+采用compactiion算法。由于tenured generaion区域比较大，而且通常对象生命周期都比较长，compaction需要一定时间。所以这部分的gc时间比较长。 
+
+68864K->8575K(77440K)
+垃圾收集前后的年轻代内存使用情况，其中前面的68864K为gc之前的大小，8575K为gc之后的内存大小，括号里的77440K为该内存区域的总量。
+gc前 -> gc后 （总量）
+
+[Times: user=0.00 sys=0.02, real=0.03 secs]
+分别表示用户态耗时，内核态耗时和总耗时
+real : 指的是操作从开始到结束所经过的墙钟时间（WallClock Time）
+user : 指的是用户态消耗的CPU时间
+sys : 指的是内核态消耗的CPU时间
+注：墙钟时间包括各种非运算的等待耗时，例如等待磁盘IO、等待线程阻塞，而CPU时间不包括这些耗时，但是当系统有多个CPU或者多核的话，多线程操作会叠加这些CPU时间，所以看到user或sys时间超过real时间是完全正常的。 
+user + sys 就是CPU花费的实际时间，注意这个值统计了所有CPU上的时间，如果进程工作在多线程的环境下，叠加了多线程的时间，这个值是会超出real所记录的值的，即 user + sys = real
+如果出现几百次的real time时间大于 user+sys，表明两个问题，第一是IO操作密集，第二是CPU分配的额度不够了。
+
+
+接下来以模拟串行GC oom为例，分析GC日志：
 
 
 
