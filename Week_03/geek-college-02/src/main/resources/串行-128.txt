@@ -1,0 +1,136 @@
+"C:\Program Files\Java\jdk1.8.0_91\bin\java.exe" -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:56399,suspend=y,server=n -Xmx128m -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -javaagent:C:\Users\hfzhang\.IdeaIC2018.2\system\captureAgent\debugger-agent.jar=file:/C:/Users/hfzhang/AppData/Local/Temp/capture.props -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;D:\User\workspace\springboot-maven-hf\jvm-actual\target\classes;D:\m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.5.RELEASE\spring-boot-starter-web-2.3.5.RELEASE.jar;D:\m2\repository\org\springframework\boot\spring-boot-starter\2.3.5.RELEASE\spring-boot-starter-2.3.5.RELEASE.jar;D:\m2\repository\org\springframework\boot\spring-boot\2.3.5.RELEASE\spring-boot-2.3.5.RELEASE.jar;D:\m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.5.RELEASE\spring-boot-autoconfigure-2.3.5.RELEASE.jar;D:\m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.5.RELEASE\spring-boot-starter-logging-2.3.5.RELEASE.jar;D:\m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;D:\m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;D:\m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;D:\m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;D:\m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.5.RELEASE\spring-boot-starter-json-2.3.5.RELEASE.jar;D:\m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.3\jackson-databind-2.11.3.jar;D:\m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.3\jackson-annotations-2.11.3.jar;D:\m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.3\jackson-core-2.11.3.jar;D:\m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.3\jackson-datatype-jdk8-2.11.3.jar;D:\m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.3\jackson-datatype-jsr310-2.11.3.jar;D:\m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.3\jackson-module-parameter-names-2.11.3.jar;D:\m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.5.RELEASE\spring-boot-starter-tomcat-2.3.5.RELEASE.jar;D:\m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.39\tomcat-embed-core-9.0.39.jar;D:\m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;D:\m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.39\tomcat-embed-websocket-9.0.39.jar;D:\m2\repository\org\springframework\spring-web\5.2.10.RELEASE\spring-web-5.2.10.RELEASE.jar;D:\m2\repository\org\springframework\spring-beans\5.2.10.RELEASE\spring-beans-5.2.10.RELEASE.jar;D:\m2\repository\org\springframework\spring-webmvc\5.2.10.RELEASE\spring-webmvc-5.2.10.RELEASE.jar;D:\m2\repository\org\springframework\spring-aop\5.2.10.RELEASE\spring-aop-5.2.10.RELEASE.jar;D:\m2\repository\org\springframework\spring-context\5.2.10.RELEASE\spring-context-5.2.10.RELEASE.jar;D:\m2\repository\org\springframework\spring-expression\5.2.10.RELEASE\spring-expression-5.2.10.RELEASE.jar;D:\m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;D:\m2\repository\org\springframework\spring-core\5.2.10.RELEASE\spring-core-5.2.10.RELEASE.jar;D:\m2\repository\org\springframework\spring-jcl\5.2.10.RELEASE\spring-jcl-5.2.10.RELEASE.jar;D:\m2\repository\io\netty\netty-all\4.1.51.Final\netty-all-4.1.51.Final.jar;D:\m2\repository\org\apache\httpcomponents\httpasyncclient\4.1.4\httpasyncclient-4.1.4.jar;D:\m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;D:\m2\repository\org\apache\httpcomponents\httpcore-nio\4.4.13\httpcore-nio-4.4.13.jar;D:\m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;D:\m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.2\lib\idea_rt.jar" com.hf.job03.GCLogAnalysis
+Connected to the target VM, address: '127.0.0.1:56399', transport: 'socket'
+正在执行...
+2021-01-21T16:20:39.021+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.021+0800: [DefNew: 34284K->4352K(39296K), 0.0062720 secs] 34284K->9036K(126720K), 0.0063470 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.036+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.036+0800: [DefNew: 38736K->4344K(39296K), 0.0104657 secs] 43421K->24352K(126720K), 0.0105088 secs] [Times: user=0.00 sys=0.02, real=0.01 secs] 
+2021-01-21T16:20:39.054+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.054+0800: [DefNew: 39288K->4344K(39296K), 0.0081231 secs] 59296K->37088K(126720K), 0.0081714 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.072+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.072+0800: [DefNew: 39062K->4349K(39296K), 0.0069721 secs] 71806K->49004K(126720K), 0.0070251 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.086+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.086+0800: [DefNew: 39293K->4351K(39296K), 0.0066010 secs] 83948K->60273K(126720K), 0.0066508 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.099+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.099+0800: [DefNew: 39251K->4341K(39296K), 0.0063640 secs] 95173K->71516K(126720K), 0.0064164 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.112+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.112+0800: [DefNew: 38960K->4350K(39296K), 0.0069567 secs] 106135K->83877K(126720K), 0.0070302 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.125+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.125+0800: [DefNew: 39279K->39279K(39296K), 0.0000324 secs]2021-01-21T16:20:39.125+0800: [Tenured: 79527K->87294K(87424K), 0.0166245 secs] 118807K->90583K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0167356 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.148+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.148+0800: [Tenured: 87402K->87326K(87424K), 0.0173386 secs] 126694K->99320K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0174131 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.170+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.170+0800: [Tenured: 87326K->87233K(87424K), 0.0182099 secs] 126339K->107528K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0182778 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.193+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.193+0800: [Tenured: 87390K->86736K(87424K), 0.0267360 secs] 126635K->107633K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0268234 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+2021-01-21T16:20:39.224+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.224+0800: [Tenured: 87257K->87257K(87424K), 0.0079823 secs] 126546K->112888K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0080558 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.236+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.236+0800: [Tenured: 87257K->87257K(87424K), 0.0031707 secs] 126471K->115863K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0032360 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.241+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.241+0800: [Tenured: 87257K->87257K(87424K), 0.0068822 secs] 126422K->119807K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0069536 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.250+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.250+0800: [Tenured: 87347K->87398K(87424K), 0.0221167 secs] 126631K->119635K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0221830 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.274+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.274+0800: [Tenured: 87398K->87398K(87424K), 0.0032344 secs] 126434K->121927K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0032910 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.278+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.278+0800: [Tenured: 87398K->87398K(87424K), 0.0021441 secs] 126380K->123581K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0021858 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.281+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.281+0800: [Tenured: 87398K->87398K(87424K), 0.0028515 secs] 126639K->125607K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0029132 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.284+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.284+0800: [Tenured: 87398K->87308K(87424K), 0.0157044 secs] 126584K->123907K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0157594 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.300+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.300+0800: [Tenured: 87308K->87308K(87424K), 0.0046887 secs] 126480K->124600K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0047817 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2021-01-21T16:20:39.306+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.306+0800: [Tenured: 87308K->87308K(87424K), 0.0030108 secs] 126554K->124866K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0030720 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.309+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.309+0800: [Tenured: 87363K->87363K(87424K), 0.0019729 secs] 126583K->126138K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0020177 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.311+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.311+0800: [Tenured: 87363K->87171K(87424K), 0.0194632 secs] 126138K->125524K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0195089 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.331+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.331+0800: [Tenured: 87171K->87171K(87424K), 0.0024592 secs] 126350K->125668K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0025101 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.334+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.334+0800: [Tenured: 87171K->87171K(87424K), 0.0023220 secs] 126266K->125524K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0024135 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.337+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.337+0800: [Tenured: 87171K->87171K(87424K), 0.0026885 secs] 126144K->125668K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0027420 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.340+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.340+0800: [Tenured: 87315K->87315K(87424K), 0.0022917 secs] 126441K->125856K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0023451 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.342+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.342+0800: [Tenured: 87315K->87315K(87424K), 0.0020984 secs] 126497K->126198K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0021508 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.344+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.344+0800: [Tenured: 87315K->87112K(87424K), 0.0197551 secs] 126198K->125583K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0198030 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2021-01-21T16:20:39.364+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.364+0800: [Tenured: 87112K->87112K(87424K), 0.0032581 secs] 126102K->125634K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0033249 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.368+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.368+0800: [Tenured: 87112K->87112K(87424K), 0.0048604 secs] 126068K->125633K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0049103 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.373+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.373+0800: [Tenured: 87249K->87249K(87424K), 0.0027014 secs] 126462K->125770K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0027584 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-21T16:20:39.376+0800: [Full GC (Allocation Failure) 2021-01-21T16:20:39.376+0800: [Tenured: 87249K->87112K(87424K), 0.0025929 secs] 125770K->125633K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0026649 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+Disconnected from the target VM, address: '127.0.0.1:56399', transport: 'socket'
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at com.hf.job03.GCLogAnalysis.generateGarbage(GCLogAnalysis.java:51)
+	at com.hf.job03.GCLogAnalysis.main(GCLogAnalysis.java:28)
+Heap
+ def new generation   total 39296K, used 38544K [0x00000000f8000000, 0x00000000faaa0000, 0x00000000faaa0000)
+  eden space 34944K, 100% used [0x00000000f8000000, 0x00000000fa220000, 0x00000000fa220000)
+  from space 4352K,  82% used [0x00000000fa660000, 0x00000000fa9e43d8, 0x00000000faaa0000)
+  to   space 4352K,   0% used [0x00000000fa220000, 0x00000000fa220000, 0x00000000fa660000)
+ tenured generation   total 87424K, used 87112K [0x00000000faaa0000, 0x0000000100000000, 0x0000000100000000)
+   the space 87424K,  99% used [0x00000000faaa0000, 0x00000000fffb2020, 0x00000000fffb2200, 0x0000000100000000)
+ Metaspace       used 3243K, capacity 4568K, committed 4864K, reserved 1056768K
+  class space    used 347K, capacity 392K, committed 512K, reserved 1048576K
+
+Process finished with exit code 1
+
+
+
+
+
+
+
+JVM参数：-Xmx128m -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps
+日志分析：
+Minor GC分析
+第一行gc日志为例：
+2021-01-21T16:20:39.021+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.021+0800: [DefNew: 34284K->4352K(39296K), 0.0062720 secs] 34284K->9036K(126720K), 0.0063470 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+1. 2021-01-21T16:20:39.021+0800
+GC事件开始的时间点，其中+0800，表示当前时间区为东八区，这只是一个标识，方便我们直观判断GC发生的时间点
+
+2. GC (Allocation Failure)
+GC - 用来区分Minor GC 还是 Full GC的标志。没有FULL，只有GC，表明这是一次小型的GC（Minor GC），即年轻代GC，Allocation Failure 表示触发GC的原因，本次GC事件，是由于对象分配失败，年轻代中没有足够空间来存放新生代的对象引起的。
+
+3. [DefNew: 34284K->4352K(39296K), 0.0062720 secs] 34284K->9036K(126720K), 0.0063470 secs]
+DefNew - 表示垃圾收集器的名称，这个名字表示：年轻代使用单线程、标记-复制算法、STW垃圾收集器。
+34284K->4352K ：表示在垃圾收集之前和之后的年轻代使用大小，
+(39296K)：表示年轻代总大小。进一步分析可知：GC之后年轻代使用率为11%
+
+4. 34284K->9036K(126720K) - 表示在垃圾收集之前和之后的整个堆内存的使用情况。(126720K) 则表示堆内存可用的总空间大小，进一步分析得知：GC之后整个堆内存使用率为7%
+
+5. 0.0063470 secs  - GC持续的时间，单位 秒
+
+6. [Times: user=0.01 sys=0.00, real=0.01 secs]
+此次GC持续的时间，通过三个部分来衡量：user-表示所有GC线程消耗的CPU时间；sys - 表示系统调用和系统等待事件消耗的时间；real - 表示应用程序暂停的时间。
+因为串行垃圾收集器（Serial Garbage Collector）只使用单个线程，所以这里的real = user + sys ,0.01秒也就是10毫秒
+
+7. [DefNew: 34284K->4352K(39296K), 0.0062720 secs] 34284K->9036K(126720K), 0.0063470 secs]
+通过上面的日志可以得出：在垃圾收集之前，堆内存总的使用量为34284K，其中年轻代也是使用了34284K，那么可以判断GC前，老年代空间的使用量为0.【实际这是GC日志中的第一条记录，后面这俩值就会有区别了】
+继续分析：
+GC前后对比，年轻代使用量为 34284K->4352K，减少了 29932K  ， 即 34284K - 4352K = 29932K
+而堆内存的使用量为 34284K->9036K，减少了25248K，即 34284K - 9036K = 25248K
+整个对内存使用量 < 年轻代使用量，说明双发的差出来的，都从年轻代提升到了老年代，
+从而可以算出提升到老年代的空间为 29932K - 25248K = 4684K，当然另一组数字也可以算出来，用GC后剩余的堆内存空间减去年轻代内存空间，即 9036K - 4352K = 4684K，这两个结果是一样的。
+
+总结：综上所述，通过分析，得出我们关注GC的日志主要关注两个数据：GC暂停时间，以及GC后的内存使用量/使用率
+
+
+Full GC分析
+2021-01-21T16:20:39.125+0800: [GC (Allocation Failure) 2021-01-21T16:20:39.125+0800: [DefNew: 39279K->39279K(39296K), 0.0000324 secs]2021-01-21T16:20:39.125+0800: [Tenured: 79527K->87294K(87424K), 0.0166245 secs] 118807K->90583K(126720K), [Metaspace: 3212K->3212K(1056768K)], 0.0167356 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+1. 2021-01-21T16:20:39.148+0800 - GC开始时间
+
+2. [DefNew: 39279K->39279K(39296K), 0.0000324 secs]
+由之前的分析得知，此次发生了一次年轻代GC，原因是内存分配失败，收集器同样用的是DefNew；此次GC前后年轻代的使用大小没有变化，耗时0.0000324 secs，说明这次基本上GC事件没有处理年轻代。
+
+3. [Tenured: 79527K->87294K(87424K), 0.0166245 secs] 118807K->90583K(126720K)
+Tenured - 用于清理老年代空间的垃圾收集器名称，Tenured表明使用的是单线程的STW垃圾收集器，使用标记-清除-整理(mark-sweep-compact)算法，79527K->87294K(87424K)，表示GC前后老年代的使用量，以及老年代的空间大小，0.0166245 secs 是清理老年代所花费的时间。‘
+
+4. 118807K->90583K(126720K) - 在GC前后整个堆内存部分的使用情况，以及可用的堆内存大小。
+
+5. [Metaspace: 3212K->3212K(1056768K)] - Metaspace 空间的变化情况，可以看出，此次GC过程中Metaspace也没变化。
+
+6. [Times: user=0.02 sys=0.00, real=0.02 secs] 
+GC事件的持续时间，串行垃圾收集器，单线程，因此real = user + sys。20毫秒的暂停时间，比前面的年轻代GC来说时间消耗增加了一倍。那这个时间和什么有关系呢？答案就是 GC时间，与GC后存活对象的总数量关系最大。
+
+7. 进一步分析，GC后老年代的使用率为 87294K/87424K=99%，这个值相当高了，很可能为后面的oom埋下伏笔。
+和年轻代相比，此次GC清理了老年代和Metaspace（虽然Metaspace没有变化）
+
+总结：综上所述，FullGC，我们主要关注GC之后内存使用量是否下降，其次关注暂停时间。简单估算，GC后老年代使用量为85M左右，耗时20毫秒，如果内存扩大10倍，GC后老年代内存使用量也扩大10倍，那耗时可能就是500毫秒甚至更高，系统就会有明显的影响。这也是我们
+经常说的串行GC弱的一个原因，所以一般服务端不会采用串行GC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
