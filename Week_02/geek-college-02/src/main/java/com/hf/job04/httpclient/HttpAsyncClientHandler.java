@@ -1,5 +1,7 @@
 package com.hf.job04.httpclient;
 
+import com.hf.job04.filter.HttpRequestFilter;
+import com.hf.job04.router.HttpEndpointRouter;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -16,6 +18,8 @@ import org.apache.http.impl.nio.reactor.IOReactorConfig;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.*;
 
 import static io.netty.handler.codec.http.HttpResponseStatus.NO_CONTENT;
@@ -32,8 +36,18 @@ public class HttpAsyncClientHandler {
     private ExecutorService executorService;
     private String requestUrl;
 
-    public HttpAsyncClientHandler(String requestUrl) {
-        this.requestUrl = requestUrl.endsWith("/") ? requestUrl.substring(0, requestUrl.length() - 1) : requestUrl;
+    public HttpAsyncClientHandler(List<String> requestUrlList) {
+        HttpEndpointRouter router = new HttpEndpointRouter() {
+            @Override
+            public String route(List<String> urls) {
+                Random random = new Random();
+                String resultUrl = urls.get(random.nextInt(urls.size()));
+                System.out.println("最终路由的URL："+resultUrl);
+                return resultUrl;
+            }
+        };
+        String url = router.route(requestUrlList);
+        this.requestUrl = url.endsWith("/") ? url.substring(0, url.length() - 1) : url;
         int cores = Runtime.getRuntime().availableProcessors() * 2;
         long keepAliveTime = 1000;
         int queueSize = 2048;
@@ -47,14 +61,16 @@ public class HttpAsyncClientHandler {
         httpAsyncClient.start();
     }
 
-    public void handle(final FullHttpRequest fullHttpRequest, final ChannelHandlerContext ctx) {
-        final String url = this.requestUrl + fullHttpRequest.uri();
+    public void handle(final FullHttpRequest fullHttpRequest, final ChannelHandlerContext ctx, HttpRequestFilter filter) {
+        final String url = this.requestUrl+ fullHttpRequest.uri();
+        filter.filter(fullHttpRequest, ctx);
         executorService.submit(() -> fetchGet(fullHttpRequest, ctx, url));
     }
 
     private void fetchGet(final FullHttpRequest inbound, final ChannelHandlerContext ctx, final String url) {
         final HttpGet httpGet = new HttpGet(url);
         httpGet.setHeader(HTTP.CONN_DIRECTIVE, HTTP.CONN_KEEP_ALIVE);
+        httpGet.setHeader("zhf", inbound.headers().get("hfzhang"));
         httpAsyncClient.execute(httpGet, new FutureCallback<HttpResponse>() {
             @Override
             public void completed(final HttpResponse endpointResponse) {

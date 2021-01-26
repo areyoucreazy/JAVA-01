@@ -11,6 +11,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author hfzhang
  * @date 2021/1/18
@@ -19,7 +22,10 @@ public class NettyHttpServer {
     public static void main(String[] args) throws InterruptedException {
 
         int port = 8088;
-        String proxyServer = "http://localhost:8801/";
+
+        List<String> proxyServerList = new ArrayList<>();
+        proxyServerList.add( "http://localhost:8801/");
+        proxyServerList.add( "http://localhost:8802/");
 
         EventLoopGroup bossGroup = new NioEventLoopGroup(2);
         EventLoopGroup workerGroup = new NioEventLoopGroup(16);
@@ -38,7 +44,7 @@ public class NettyHttpServer {
 
             b.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)
                     .handler(new LoggingHandler(LogLevel.INFO))
-                    .childHandler(new HttpInitlalizer(proxyServer));
+                    .childHandler(new HttpInitlalizer(proxyServerList));
 
             Channel ch = b.bind(port).sync().channel();
             System.out.println("开启netty http服务器，监听地址和端口为 http://127.0.0.1:"+port+'/');

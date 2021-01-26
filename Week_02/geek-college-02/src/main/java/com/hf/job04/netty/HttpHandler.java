@@ -1,5 +1,6 @@
 package com.hf.job04.netty;
 
+import com.hf.job04.filter.HttpRequestFilter;
 import com.hf.job04.httpclient.HttpAsyncClientHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -7,6 +8,7 @@ import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.util.ReferenceCountUtil;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author hfzhang
@@ -14,12 +16,14 @@ import java.util.Date;
  */
 public class HttpHandler extends ChannelInboundHandlerAdapter {
 
-    private final String proxyServer;
+    private final List<String> proxyServerList;
     private HttpAsyncClientHandler handler;
+    private HttpRequestFilter filter;
 
-    public HttpHandler(String proxyServer){
-        this.proxyServer = proxyServer;
-        handler = new HttpAsyncClientHandler(this.proxyServer);
+    public HttpHandler(List<String> proxyServerList, HttpRequestFilter filter){
+        this.proxyServerList = proxyServerList;
+        this.filter = filter;
+        handler = new HttpAsyncClientHandler(this.proxyServerList);
     }
 
     @Override
@@ -38,7 +42,7 @@ public class HttpHandler extends ChannelInboundHandlerAdapter {
 //            if(uri.contains("/test")){
 //                handlerTest(fullHttpRequest, ctx);
 //            }
-            handler.handle(fullHttpRequest, ctx);
+            handler.handle(fullHttpRequest, ctx, filter);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

@@ -30,7 +30,7 @@ public class HttpServer02 {
             //模拟业务操作，20ms
             Thread.sleep(20);
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
-            printWriter.println("HTTP:/1.1 200 OK");
+            printWriter.println("HTTP/1.1 200 OK");
             printWriter.println("Content-Type:text/html;charset=utf-8");
             String body = "Hello nio";
             printWriter.println("Content-length:"+body.getBytes().length);
