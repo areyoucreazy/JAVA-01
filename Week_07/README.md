@@ -8,6 +8,6 @@ NamedParameterJdbcTemplate 批量方式
 3. Druid+JdbcTemplate批量+线程池方式
 一次任务跑1000，
 耗时： 152607毫秒
-![avatar](/JAVA-01/Week_07/1.png)
+![avatar](1.png)
 一次任务跑500
-![avatar](/JAVA-01/Week_07/2.png)
+![avatar](2.png)
