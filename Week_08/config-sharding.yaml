@@ -75,10 +75,10 @@ rules:
      type: INLINE
      props:
        algorithm-expression: ds_${user_id % 2}
-   database_inline:
+   t_order_inline:
      type: INLINE
      props:
-       algorithm-expression: t_order_${user_id % 16}
+       algorithm-expression: t_order_${order_id % 16}
 #    t_order_item_inline:
 #      type: INLINE
 #      props:

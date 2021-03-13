@@ -1,5 +1,5 @@
 学习笔记
-### 分库分表策略是通过shardingsphere-proxy来实现
+# 分库分表策略是通过shardingsphere-proxy来实现
 ## 版本是5.0.0alpha
 ## 分库分表配置文件config-sharding.yaml
 
